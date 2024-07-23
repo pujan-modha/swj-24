@@ -35,7 +35,7 @@ export default function Hero() {
   );
 }
 
-const shuffle = (array) => {
+const shuffle = <T,>(array: T[]): T[] => {
   let currentIndex = array.length,
     randomIndex;
 
@@ -51,6 +51,7 @@ const shuffle = (array) => {
 
   return array;
 };
+
 
 const squareData = [
   {
@@ -107,13 +108,16 @@ const generateSquares = () => {
 };
 
 const ShuffleGrid = () => {
-  const timeoutRef = useRef(null);
-  const [squares, setSquares] = useState(generateSquares());
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [squares, setSquares] = useState(() => generateSquares());
 
   useEffect(() => {
     shuffleSquares();
 
-    return () => clearTimeout(timeoutRef.current);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const shuffleSquares = () => {
@@ -124,7 +128,7 @@ const ShuffleGrid = () => {
 
   return (
     <div className="grid grid-cols-3 grid-rows-3 lg:h-[30rem] gap-1">
-      {squares.map((sq) => sq)}
+      {squares}
     </div>
   );
 };

@@ -8,7 +8,9 @@ import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/shee
 const DURATION = 0.2;
 const STAGGER = 0.02;
 
-const FlipLink = ({ children, href }) => {
+import { ReactNode } from "react";
+
+const FlipLink = ({ children, href }: { children: ReactNode, href: string }) => {
   return (
     <motion.a
       initial="initial"
@@ -20,7 +22,7 @@ const FlipLink = ({ children, href }) => {
       }}
     >
       <div>
-        {children.split("").map((l, i) => (
+        {String(children ?? "").split("").map((l, i) => (
           <motion.span
             variants={{
               initial: {
@@ -43,7 +45,7 @@ const FlipLink = ({ children, href }) => {
         ))}
       </div>
       <div className="absolute inset-0">
-        {children.split("").map((l, i) => (
+        {String(children ?? "").split("").map((l, i) => (
           <motion.span
             variants={{
               initial: {
@@ -87,7 +89,7 @@ export default function Navbar() {
           />
         </a>
         <div className="flex space-x-3 md:order-2 md:space-x-0">
-          <Button className="hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
+          <Button className="hidden lg:block hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
             <span>Register</span>
             <span>
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
@@ -97,15 +99,16 @@ export default function Navbar() {
           {/* Mobile Navigation */}
           <div className="md:hidden my-auto">
             <Sheet>
-              <SheetTrigger>
-                <button
+              <SheetTrigger asChild>
+                <Button
+                variant={"link"}
                   onClick={toggleMenu}
                   type="button"
-                  className="md:hidden"
+                  className="md:hidden p-0 m-0 text-foreground"
                 >
                   <span className="sr-only">Open main menu</span>
                   <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
-                </button>
+                </Button>
               </SheetTrigger>
               <SheetContent
                 side="left"

@@ -14,7 +14,7 @@ const Contact = () => {
         </div>
         <div className="text-center grid grid-cols-2 gap-4 text-brand">
             {contact.contact.map((contact) => (
-              <div className="flex border-2 border-brand bg-brand/10 hover:bg-transparent duration-300 rounded-md aspect-square lg:aspect-[2/1]">
+              <div className="flex border-2 border-brand bg-brand/10 hover:bg-transparent duration-300 rounded-md aspect-square lg:aspect-[2/1]" key={contact.number}>
                 <ul className="m-auto">
                   <li className="text-xl font-semibold">{contact.name}</li>
                   <li className="font-medium hover:text-foreground duration-300">

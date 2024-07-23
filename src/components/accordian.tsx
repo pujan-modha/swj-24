@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import { useState } from "react";
-const Accordion = ({ title, answer }) => {
+const Accordion = ({ title, answer }: { title: string; answer: string }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (

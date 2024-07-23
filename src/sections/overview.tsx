@@ -20,7 +20,7 @@ const Overview = () => {
             recusandae vero dicta suscipit.
           </p>
         </div>
-        <p>
+        <div>
           <div className="bg-brand/10 border-2 border-brand rounded-md hover:bg-transparent duration-300">
             <img
               src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
@@ -28,7 +28,7 @@ const Overview = () => {
               className="w-full rounded-lg p-2"
             />
           </div>
-        </p>
+        </div>
       </div>
     </div>
   );
