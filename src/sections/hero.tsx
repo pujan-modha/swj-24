@@ -55,39 +55,39 @@ const shuffle = <T,>(array: T[]): T[] => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img1.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img1.webp",
   },
   {
     id: 2,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img2.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img2.webp",
   },
   {
     id: 3,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img3.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img3.webp",
   },
   {
     id: 4,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img4.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img4.webp",
   },
   {
     id: 5,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img5.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img5.webp",
   },
   {
     id: 6,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img6.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img6.webp",
   },
   {
     id: 7,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img7.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img7.webp",
   },
   {
     id: 8,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img8.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img8.webp",
   },
   {
     id: 9,
-    src: "https://images.pujan.pm/image/https://swj.pujan.pm/images/img9.jpg",
+    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img9.webp",
   },
 ];
 
