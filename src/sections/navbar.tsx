@@ -83,7 +83,7 @@ export default function Navbar() {
       <div className="flex flex-wrap justify-between items-center p-4 mx-auto max-w-7xl">
         <a href="/" className="flex items-center space-x-0">
           <img
-            src="/src/assets/logo-main.png"
+            src="/logo-main.png"
             alt="logo"
             className="w-32 h-auto mr-auto"
           />
@@ -120,7 +120,7 @@ export default function Navbar() {
                     className="cursor-pointer flex items-center gap-1 my-auto"
                   >
                     <img
-                      src="/src/assets/logo-main.png"
+                      src="/logo-main.png"
                       alt="logo"
                       className="w-32 h-auto mr-auto"
                     />

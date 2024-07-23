@@ -9,12 +9,12 @@ export default function Hero() {
     <section className="min-h-screen w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl m-auto">
       <div className="mt-24 lg:my-auto">
         <img
-          src="/src/assets/google-for-startups.svg"
+          src="/google-for-startups.svg"
           alt="Google for Startups Logo"
           className="w-48 h-auto pb-2"
         />
         <img
-          src="/src/assets/logo-main.png"
+          src="/logo-main.png"
           alt="Startup Weekend Jaipur Logo"
           className="w-96 h-auto"
         />

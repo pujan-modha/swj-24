@@ -11,7 +11,7 @@ const Footer = () => {
                 className="flex items-center align-middle text-center justify-center"
               >
                 <img
-                  src="/src/assets/logo-main.png"
+                  src="/logo-main.png"
                   alt="SWJ 24"
                   className="w-[128px]"
                 />
