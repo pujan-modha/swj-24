@@ -55,39 +55,39 @@ const shuffle = <T,>(array: T[]): T[] => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.prismic.io/swj24/Zp_y6R5LeNNTxbxV_img1.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y6R5LeNNTxbxV_img1.webp?auto=format,compress&w=500",
   },
   {
     id: 2,
-    src: "https://images.prismic.io/swj24/Zp_y6h5LeNNTxbxW_img2.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y6h5LeNNTxbxW_img2.webp?auto=format,compress&w=500",
   },
   {
     id: 3,
-    src: "https://images.prismic.io/swj24/Zp_y6x5LeNNTxbxX_img3.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y6x5LeNNTxbxX_img3.webp?auto=format,compress&w=500",
   },
   {
     id: 4,
-    src: "https://images.prismic.io/swj24/Zp_y7B5LeNNTxbxY_img4.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y7B5LeNNTxbxY_img4.webp?auto=format,compress&w=500",
   },
   {
     id: 5,
-    src: "https://images.prismic.io/swj24/Zp_y7R5LeNNTxbxZ_img5.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y7R5LeNNTxbxZ_img5.webp?auto=format,compress&w=500",
   },
   {
     id: 6,
-    src: "https://images.prismic.io/swj24/Zp_y7h5LeNNTxbxa_img6.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y7h5LeNNTxbxa_img6.webp?auto=format,compress&w=500",
   },
   {
     id: 7,
-    src: "https://images.prismic.io/swj24/Zp_y7x5LeNNTxbxb_img7.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y7x5LeNNTxbxb_img7.webp?auto=format,compress&w=500",
   },
   {
     id: 8,
-    src: "https://images.prismic.io/swj24/Zp_y8B5LeNNTxbxc_img8.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y8B5LeNNTxbxc_img8.webp?auto=format,compress&w=500",
   },
   {
     id: 9,
-    src: "https://images.prismic.io/swj24/Zp_y8R5LeNNTxbxd_img9.webp?auto=format,compress",
+    src: "https://images.prismic.io/swj24/Zp_y8R5LeNNTxbxd_img9.webp?auto=format,compress&w=500",
   },
 ];
 
