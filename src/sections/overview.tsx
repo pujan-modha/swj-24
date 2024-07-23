@@ -23,7 +23,7 @@ const Overview = () => {
         <div>
           <div className="bg-brand/10 border-2 border-brand rounded-md hover:bg-transparent duration-300">
             <img
-              src="https://image.pujan.pm/image/https://swj.pujan.pm/images/overview.webp"
+              src="https://images.prismic.io/swj24/Zp_y8h5LeNNTxbxe_overview.webp?auto=format,compress"
               alt="Startup Weekend Logo"
               className="w-full rounded-lg p-2"
             />

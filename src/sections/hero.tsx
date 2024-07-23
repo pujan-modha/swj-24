@@ -55,39 +55,39 @@ const shuffle = <T,>(array: T[]): T[] => {
 const squareData = [
   {
     id: 1,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img1.webp",
+    src: "https://images.prismic.io/swj24/Zp_y6R5LeNNTxbxV_img1.webp?auto=format,compress",
   },
   {
     id: 2,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img2.webp",
+    src: "https://images.prismic.io/swj24/Zp_y6h5LeNNTxbxW_img2.webp?auto=format,compress",
   },
   {
     id: 3,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img3.webp",
+    src: "https://images.prismic.io/swj24/Zp_y6x5LeNNTxbxX_img3.webp?auto=format,compress",
   },
   {
     id: 4,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img4.webp",
+    src: "https://images.prismic.io/swj24/Zp_y7B5LeNNTxbxY_img4.webp?auto=format,compress",
   },
   {
     id: 5,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img5.webp",
+    src: "https://images.prismic.io/swj24/Zp_y7R5LeNNTxbxZ_img5.webp?auto=format,compress",
   },
   {
     id: 6,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img6.webp",
+    src: "https://images.prismic.io/swj24/Zp_y7h5LeNNTxbxa_img6.webp?auto=format,compress",
   },
   {
     id: 7,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img7.webp",
+    src: "https://images.prismic.io/swj24/Zp_y7x5LeNNTxbxb_img7.webp?auto=format,compress",
   },
   {
     id: 8,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img8.webp",
+    src: "https://images.prismic.io/swj24/Zp_y8B5LeNNTxbxc_img8.webp?auto=format,compress",
   },
   {
     id: 9,
-    src: "https://image.pujan.pm/image/https://swj.pujan.pm/images/img9.webp",
+    src: "https://images.prismic.io/swj24/Zp_y8R5LeNNTxbxd_img9.webp?auto=format,compress",
   },
 ];
 
