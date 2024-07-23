@@ -12,10 +12,10 @@ const Sponsors = () => {
         blurBorders={true}
         blurBoderColor={"#282A36"}
       >
-        <Slider.Slide>Sponsor 1</Slider.Slide>
-        <Slider.Slide>Sponsor 2</Slider.Slide>
-        <Slider.Slide>Sponsor 3</Slider.Slide>
-        <Slider.Slide>Sponsor 4</Slider.Slide>
+        <Slider.Slide><p className="text-2xl font-bold">Sponsor 1</p></Slider.Slide>
+        <Slider.Slide><p className="text-2xl font-bold">Sponsor 2</p></Slider.Slide>
+        <Slider.Slide><p className="text-2xl font-bold">Sponsor 3</p></Slider.Slide>
+        <Slider.Slide><p className="text-2xl font-bold">Sponsor 4</p></Slider.Slide>
       </Slider>
     </div>
   );

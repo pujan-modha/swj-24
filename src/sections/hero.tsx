@@ -52,36 +52,43 @@ const shuffle = <T,>(array: T[]): T[] => {
   return array;
 };
 
-
 const squareData = [
   {
     id: 1,
-    src: "/images/img1.JPG"
+    src: "/images/img1.jpg",
   },
   {
     id: 2,
-    src: "/images/img2.JPG"  },
+    src: "/images/img2.jpg",
+  },
   {
     id: 3,
-    src: "/images/img3.JPG"  },
+    src: "/images/img3.jpg",
+  },
   {
     id: 4,
-    src: "/images/img4.jpg"  },
+    src: "/images/img4.jpg",
+  },
   {
     id: 5,
-    src: "/images/img5.jpg"  },
+    src: "/images/img5.jpg",
+  },
   {
     id: 6,
-    src: "/images/img6.jpg"  },
+    src: "/images/img6.jpg",
+  },
   {
     id: 7,
-    src: "/images/img7.jpg"  },
+    src: "/images/img7.jpg",
+  },
   {
     id: 8,
-    src: "/images/img8.jpg"  },
+    src: "/images/img8.jpg",
+  },
   {
     id: 9,
-    src: "/images/img9.jpg"  },
+    src: "/images/img9.jpg",
+  },
 ];
 
 const generateSquares = () => {
@@ -109,7 +116,7 @@ const ShuffleGrid = () => {
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const shuffleSquares = () => {

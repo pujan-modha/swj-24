@@ -4,7 +4,7 @@ const Overview = () => {
   return (
     <div>
       <Title title="Overview" />
-      <div className="grid lg:grid-cols-2 gap-4 min-h-[90vh] items-center content-center">
+      <div className="grid lg:grid-cols-2 gap-4 items-center content-center">
         <div className="text-2xl mt-4">
           <p>
             Startup Weekend is a three-day workshop that provides a
