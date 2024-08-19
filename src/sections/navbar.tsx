@@ -1,16 +1,25 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
-import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/sheet";
 
 const DURATION = 0.2;
 const STAGGER = 0.02;
 
-import { ReactNode } from "react";
-
-const FlipLink = ({ children, href }: { children: ReactNode, href: string }) => {
+const FlipLink = ({
+  children,
+  href,
+}: {
+  children: ReactNode;
+  href: string;
+}) => {
   return (
     <motion.a
       initial="initial"
@@ -22,50 +31,54 @@ const FlipLink = ({ children, href }: { children: ReactNode, href: string }) => 
       }}
     >
       <div>
-        {String(children ?? "").split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: 0,
-              },
-              hovered: {
-                y: "-100%",
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block"
-            key={i}
-          >
-            {l}
-          </motion.span>
-        ))}
+        {String(children ?? "")
+          .split("")
+          .map((l, i) => (
+            <motion.span
+              variants={{
+                initial: {
+                  y: 0,
+                },
+                hovered: {
+                  y: "-100%",
+                },
+              }}
+              transition={{
+                duration: DURATION,
+                ease: "easeInOut",
+                delay: STAGGER * i,
+              }}
+              className="inline-block"
+              key={i}
+            >
+              {l}
+            </motion.span>
+          ))}
       </div>
       <div className="absolute inset-0">
-        {String(children ?? "").split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: "100%",
-              },
-              hovered: {
-                y: 0,
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block"
-            key={i}
-          >
-            {l}
-          </motion.span>
-        ))}
+        {String(children ?? "")
+          .split("")
+          .map((l, i) => (
+            <motion.span
+              variants={{
+                initial: {
+                  y: "100%",
+                },
+                hovered: {
+                  y: 0,
+                },
+              }}
+              transition={{
+                duration: DURATION,
+                ease: "easeInOut",
+                delay: STAGGER * i,
+              }}
+              className="inline-block"
+              key={i}
+            >
+              {l}
+            </motion.span>
+          ))}
       </div>
     </motion.a>
   );
@@ -88,7 +101,7 @@ export default function Navbar() {
             className="w-32 h-auto mr-auto"
           />
         </a>
-        <div className="flex space-x-3 md:order-2 md:space-x-0">
+        <div className="flex space-x-3 lg:order-2 lg:space-x-0">
           <Button className="hidden lg:block hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
             <span>Register</span>
             <span>
@@ -97,14 +110,14 @@ export default function Navbar() {
           </Button>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden my-auto">
+          <div className="lg:hidden my-auto">
             <Sheet>
               <SheetTrigger asChild>
                 <Button
-                variant={"link"}
+                  variant={"link"}
                   onClick={toggleMenu}
                   type="button"
-                  className="md:hidden p-0 m-0 text-foreground"
+                  className="lg:hidden p-0 m-0 text-foreground"
                 >
                   <span className="sr-only">Open main menu</span>
                   <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
@@ -161,8 +174,8 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:w-auto md:order-1">
-          <section className="flex gap-8 place-content-center px-8 md:px-0">
+        <div className="hidden lg:flex lg:w-auto lg:order-1">
+          <section className="flex gap-8 place-content-center px-8 lg:px-0">
             <FlipLink href="#">Overview</FlipLink>
             <FlipLink href="#">Sponsors</FlipLink>
             <FlipLink href="#">Timeline</FlipLink>
