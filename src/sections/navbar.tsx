@@ -104,7 +104,7 @@ export default function Navbar() {
         </a>
         <div className="flex space-x-3 lg:order-2 lg:space-x-0">
           <Button className="hidden lg:block hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
-            <span>Register</span>
+            <a href="/register">Register</a>
             <span>
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </span>
@@ -162,7 +162,7 @@ export default function Navbar() {
                   </SheetClose>
                   <div>
                     <Button className="w-full hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
-                      <span>Register</span>
+                      <a href="/register">Register</a>
                       <span>
                         <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                       </span>
