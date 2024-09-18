@@ -3,7 +3,7 @@ import AboutCard from "@/components/about-card.tsx";
 
 const Mentors = () => {
   return (
-    <div>
+    <div id="mentors">
       <Title title="Mentors" />
       <p className="text-lg text-center font-medium mb-4">
         Meet our selection of mentors who are industry experts in their

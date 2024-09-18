@@ -15,7 +15,6 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 
 export default function Register() {
@@ -52,9 +51,9 @@ export default function Register() {
           </div>
         </div>
         <div>
-          <Card className="flex flex-col">
+          <Card className="flex flex-col border-2 border-brand bg-brand/10">
             <CardHeader>
-              <CardTitle>Registration Form</CardTitle>
+              <CardTitle className="text-brand">Registration Form (In-House)</CardTitle>
             </CardHeader>
             <CardContent className="flex-1 space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -113,25 +112,31 @@ export default function Register() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <Checkbox id="agree-to-event-agreement" />
-                <Label htmlFor="agree-to-event-agreement">
-                  By checking the box below, you acknowledge that your provided
-                  information will be used in accordance with the relevant SWJ
-                  guidelines.
+                <Label
+                  htmlFor="agree-to-event-agreement"
+                  className="text-sm text-pretty text-muted-foreground"
+                >
+                  By registering, you acknowledge that your provided information
+                  will be used in accordance with the relevant SWJ guidelines.
                 </Label>
               </div>
-              <div className="flex justify-center">
-                <img
-                  src="/qr.png"
-                  width={200}
-                  height={200}
-                  alt="Payment QR Code"
-                  style={{ aspectRatio: "1/1", objectFit: "cover" }}
-                />
+              <div className="flex flex-col items-center justify-center">
+                <a href="upi://pay?pa=AICMUJ@icici&pn=MUJ&tr=EZYS9116629865&cu=INR&mc=null">
+                  <img
+                    src="/qr.png"
+                    width={200}
+                    height={200}
+                    alt="Payment QR Code"
+                    style={{ aspectRatio: "1/1", objectFit: "cover" }}
+                  />
+                </a>
+                <Label htmlFor="qr-code" className="text-sm mt-2">
+                  Scan or click on the QR to pay
+                </Label>
               </div>
             </CardContent>
             <CardFooter>
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full rounded-full">
                 Submit
               </Button>
             </CardFooter>

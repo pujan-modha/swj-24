@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
       <ProgressBar height="2" bgcolor="#FFB86C" duration="0" />
-      <div className="text-foreground bg-background inter selection:bg-brand selection:text-white select-none overflow-x-hidden">
+      <div className="text-foreground bg-background inter selection:bg-brand selection:text-white overflow-x-hidden">
         <ReactLenis root>
           <div className="fixed w-full top-0 z-50">
             <Navbar />

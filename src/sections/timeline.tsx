@@ -2,89 +2,249 @@ import Title from "@/components/title";
 
 const Timeline = () => {
   return (
-    <div>
+    <div id="timeline">
       {/*replace the hr tags with something cool later down the line like a moving beam on a trace or something idk*/}
       <Title title="Timeline" />
-      <div className="flex flex-row py-10 items-centercontent-center">
-        {/*<img*/}
-        {/*    src="https://via.placeholder.com/150"*/}
-        {/*    alt="placeholder"*/}
-        {/*    className="mx-auto "*/}
-        {/*/>*/}
-        <div className=" px-2">
-          <h2 className="mx-auto text-3xl">Day 1</h2>
-          <p className=" mx-auto text-2xl m-4">
-            Get to meet new people, and present your business idea. Build a
-            reliable team to help you get through to the next step.
-          </p>
-          <h2 className="mx-auto text-2xl">Dinner & Networking</h2>
-          <p className=" mx-auto text-2xl m-4">
-            Make new friends and get to know and find the people you’ll be
-            working with.
-          </p>
-          <h2 className="mx-auto text-2xl">Pitch your idea</h2>
-          <p className=" mx-auto text-2xl m-4">
-            Got a brainwave? You will have 1 minute to present your idea.
-          </p>
-          <h2 className="mx-auto text-2xl">Choose your project</h2>
-          <p className=" mx-auto text-2xl m-4">
-            Pick one from the top-rated projects that you’ll spend their weekend
-            working on.
-          </p>
-          <h2 className="mx-auto text-2xl">Build a Team</h2>
-          <p className=" mx-auto text-2xl mt-4">
-            Create a functional team to work on the idea over the weekend and
-            bring it to realization.
-          </p>
-        </div>
-      </div>
-      <hr className="w-full bg-[#9AA0A6] h-1 " />
-      <div className="flex flex-row py-10 items-centercontent-center">
-        <div className=" px-2">
-          <h2 className="mx-auto text-3xl">Day 2</h2>
-          <h2 className="mx-auto text-2xl">Get to work</h2>
-          <p className=" mx-auto text-2xl mt-4">
-            Your team will have an arsenal of resources and support at your
-            disposal to make things happen in a short period of time. <br />
-            <br />
-            Your team will be responsible for everything from building your
-            product to finding customers.
-          </p>
-          <h2 className="mx-auto text-2xl">Learn from the best</h2>
-          <p className=" mx-auto text-2xl mt-4">
-            Mentors will chip in throughout the event to help you guide
-            yourselves through the hard problems. <br />
-            <br />
-            The mentors will always be there to help when you need it.
-          </p>
-        </div>
-        {/*<img*/}
-        {/*    src="https://via.placeholder.com/150"*/}
-        {/*    alt="placeholder"*/}
-        {/*    className="mx-auto "*/}
-        {/*/>*/}
-      </div>
-      <hr className="w-full bg-[#9AA0A6] h-1 " />
-      <div className="flex flex-row py-10 items-center content-center">
-        {/*<img*/}
-        {/*    src="https://via.placeholder.com/150"*/}
-        {/*    alt="placeholder"*/}
-        {/*    className="mx-auto "*/}
-        {/*/>*/}
-        <div className=" px-2">
-          <h2 className="mx-auto text-3xl">Day 3</h2>
-          <h2 className="mx-auto text-2xl">
-            Present to a panel of expert Judges
-          </h2>
-          <p className=" mx-auto text-2xl m-4">
-            This is it! Your team will have 5 minutes to present your creation
-            to a panel of Judges and the rest of the attendees. <br />
-            <br />
-            You will get expert guidance from the mentors beforehand to prepare
-            your best for the pitches. <br />
-            <br />
-            Anyone is welcome to come and enjoy the pitches.
-          </p>
+      <div className="bg-dracula overflow-hidden">
+        <div
+          className="bg-dracula text-dracxt font-mono justify-center items-center flex"
+          data-aos="fade-up"
+        >
+          {/*component*/}
+          <div className="justify-center items-center xl:mx-auto max-w-7xl justify-items-center align-middle flex">
+            <div className="flex flex-col md:grid grid-cols-9 mx-auto text-dracxt">
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                  data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-4xl mb-1">
+                    OCTOBER 04
+                  </h3>
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    09:00
+                  </h3>
+                  <p className="leading-tight md:text-right">
+                    Inauguration of the event and room allocation
+                  </p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-end justify-center">
+                    <div className="h-[50%] w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                  className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                  data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    09:30 - 10:40
+                  </h3>
+                  <p className="leading-tight">Ice Breaker Session</p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                  data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    10:40
+                  </h3>
+                  <p className="leading-tight md:text-right">Initial Pitch</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                  className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                  data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    13:00-14:00
+                  </h3>
+                  <p className="leading-tight">Voting for ideas</p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                  data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    14:00
+                  </h3>
+                  <p className="leading-tight md:text-right">Team Formation</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                  className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                  data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-4xl mb-1">
+                    OCTOBER 05
+                  </h3>
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    09:00 - 10:00
+                  </h3>
+                  <p className="leading-tight">Mentoring Session / Progress Evaluation 1</p>
+
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                  data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    10:00 - 11:00
+                  </h3>
+                  <p className="leading-tight md:text-right">Workshop</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                  className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                  data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    11:00 - 12:00
+                  </h3>
+                  <p className="leading-tight">
+                    Mentoring Session / Progress Evaluation 2
+                  </p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                  data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-4xl mb-1">
+                    OCTOBER 06
+                  </h3>
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    08:00-09:00
+                  </h3>
+                  <p className="leading-tight md:text-right">Pitch Submission</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                  className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                  data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    13:00 - 14:00
+                  </h3>
+                  <p className="leading-tight">Pitch in Front of Judges</p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                  data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    14:00 - 15:00
+                  </h3>
+                  <p className="leading-tight md:text-right">Results Announcement/Closing Ceremony</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              {/* <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-[50%] w-6 flex items-start justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                  className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                  data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    16:30-17:00
+                  </h3>
+                  <p className="leading-tight">Evening Snacks and Dispersal</p>
+                </div>
+              </div> */}
+            </div>
+          </div>
         </div>
       </div>
     </div>

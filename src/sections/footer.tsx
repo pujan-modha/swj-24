@@ -10,47 +10,49 @@ const Footer = () => {
                 href="/"
                 className="flex items-center align-middle text-center justify-center"
               >
-                <img
-                  src="/logo-main.png"
-                  alt="SWJ 24"
-                  className="w-[128px]"
-                />
+                <img src="/logo-main.png" alt="SWJ 24" className="w-[128px]" />
               </a>
-              <ul className="flex flex-wrap items-center mt-4 lg:mt-0 text-sm text-center justify-center font-semibold text-brand sm:mb-0">
+              <ul className="flex flex-wrap items-center mt-4 lg:mt-0 text-sm text-center justify-center font-semibold text-brand sm:mb-0 gap-4">
                 <li className="hover:text-foreground duration-300">
                   <a
-                    href="mailto:ichack2023@gmail.com"
-                    className="mr-4  md:mr-6 "
+                    href="mailto:startupweekendjaipur@gmail.com"
+                    className="text-center "
                   >
                     E-MAIL
                   </a>
                 </li>
                 <li className="hover:text-foreground duration-300">
                   <a
-                    href="https://www.instagram.com/ieee_ic_hack/"
-                    className="mr-4  md:mr-6 "
+                    href="https://www.instagram.com/startupweekend_jaipur/"
+                    className="text-center"
                   >
                     INSTAGRAM
                   </a>
                 </li>
                 <li className="hover:text-foreground duration-300">
                   <a
-                    href="https://www.linkedin.com/company/ieeeindiacouncil/"
-                    className="mr-4  md:mr-6"
+                    href="https://in.linkedin.com/company/techstars-startup-weekend-jaipur"
+                    className="text-center"
                   >
                     LINKEDIN
                   </a>
                 </li>
-                <li className="hover:text-foreground duration-300">
+                {/* <li className="hover:text-foreground duration-300">
                   <a
                     href="https://www.facebook.com/ieeeindiacouncil/"
                     className=""
                   >
                     FACEBOOK
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
+            <p className="text-center text-sm text-muted-foreground">
+              Made with 💛 by{" "}
+              <a href="/credits" className="text-brand underline">
+                SWJ'24 Technical Team
+              </a>
+            </p>
           </div>
         </footer>
       </div>

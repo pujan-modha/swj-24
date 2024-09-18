@@ -4,6 +4,7 @@ import Overview from "@/sections/overview.jsx";
 import Objectives from "@/sections/objectives.jsx";
 import Faq from "@/sections/faq.jsx";
 import Contact from "@/sections/contact.jsx";
+import Timeline from "@/sections/timeline.tsx";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <div className="grid grid-cols-1 my-16 lg:my-4">
           <Overview />
           {/* <Sponsors /> */}
-          {/*<Timeline />*/}
+          <Timeline />
           <Objectives />
           {/*<Mentors />*/}
           {/*<Judges />*/}

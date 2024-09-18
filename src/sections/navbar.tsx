@@ -7,6 +7,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/sheet";
 
@@ -102,13 +103,13 @@ export default function Navbar() {
             className="w-32 h-auto mr-auto"
           />
         </a>
-        <div className="flex space-x-3 lg:order-2 lg:space-x-0">
-          <Button className="hidden lg:block hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
+        <div className="flex space-x-3 lg:order-1 lg:space-x-0">
+          {/* <Button className="hidden lg:block hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
             <a href="/register">Register</a>
             <span>
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </span>
-          </Button>
+          </Button> */}
 
           {/* Mobile Navigation */}
           <div className="lg:hidden my-auto">
@@ -128,6 +129,7 @@ export default function Navbar() {
                 side="left"
                 className="border-none bg-background w-screen p-4"
               >
+                <SheetTitle/>
                 <div className="border-b border-current-line pb-4">
                   <a
                     href="/"
@@ -144,25 +146,31 @@ export default function Navbar() {
                   <SheetClose asChild>
                     <nav className="flex h-full flex-col gap-6 py-8 text-foreground">
                       <SheetClose asChild>
-                        <FlipLink href="#">Overview</FlipLink>
+                        <FlipLink href="#overview">Overview</FlipLink>
                       </SheetClose>
                       <SheetClose asChild>
-                        <FlipLink href="#">Sponsors</FlipLink>
+                        <FlipLink href="#sponsors">Sponsors</FlipLink>
                       </SheetClose>
                       <SheetClose asChild>
-                        <FlipLink href="#">Timeline</FlipLink>
+                        <FlipLink href="#timeline">Timeline</FlipLink>
                       </SheetClose>
                       <SheetClose asChild>
-                        <FlipLink href="#">Mentors</FlipLink>
+                        <FlipLink href="#mentors">Mentors</FlipLink>
                       </SheetClose>
                       <SheetClose asChild>
-                        <FlipLink href="#">Team</FlipLink>
+                        <FlipLink href="/team">Team</FlipLink>
                       </SheetClose>
                     </nav>
                   </SheetClose>
-                  <div>
+                  <div className="flex flex-col gap-4">
                     <Button className="w-full hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
-                      <a href="/register">Register</a>
+                      <a href="/register">In-House</a>
+                      <span>
+                        <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                      </span>
+                    </Button>
+                    <Button className="w-full hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
+                      <a href="/register">Out-House</a>
                       <span>
                         <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                       </span>
@@ -177,11 +185,11 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:w-auto lg:order-1">
           <section className="flex gap-8 place-content-center px-8 lg:px-0">
-            <FlipLink href="#">Overview</FlipLink>
-            <FlipLink href="#">Sponsors</FlipLink>
-            <FlipLink href="#">Timeline</FlipLink>
-            <FlipLink href="#">Mentors</FlipLink>
-            <FlipLink href="#">Team</FlipLink>
+            <FlipLink href="#overview">Overview</FlipLink>
+            <FlipLink href="#sponsors">Sponsors</FlipLink>
+            <FlipLink href="#timeline">Timeline</FlipLink>
+            <FlipLink href="#mentors">Mentors</FlipLink>
+            <FlipLink href="/team">Team</FlipLink>
           </section>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl m-auto">
+    <section className="min-h-[100svh] w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl m-auto">
       <div className="mt-24 lg:my-auto">
         <img
           src="/google-for-startups.svg"
@@ -21,12 +21,20 @@ export default function Hero() {
         <p className="text-base md:text-lg text-foreground my-4 md:my-6">
           {`"We built a company in 54 hours, what did you do this weekend?"`}
         </p>
-        <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-          <span>Register</span>
-          <span>
-            <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-          </span>
-        </Button>
+        <div className="flex flex-row gap-4">
+          <Button className="hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
+            <a href="/register">In-House</a>
+            <span>
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            </span>
+          </Button>
+          <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+            <a href="/register">Out-House</a>
+            <span>
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            </span>
+          </Button>
+        </div>
       </div>
       <div>
         <ShuffleGrid />

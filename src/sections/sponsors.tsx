@@ -3,7 +3,7 @@ import Slider from "react-infinite-logo-slider";
 
 const Sponsors = () => {
   return (
-    <div>
+    <div id="sponsors">
         <Title title="Sponsors" />
       <Slider
         width="250px"
