@@ -84,7 +84,7 @@ export default function Register() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="residence">Residence</Label>
-                <Select id="residence">
+                <Select>
                   <SelectTrigger>
                     <SelectValue placeholder="Select your residence" />
                   </SelectTrigger>
