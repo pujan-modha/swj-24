@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, ChangeEvent } from "react";
+import axios from "axios";
 import {
   Card,
   CardHeader,
@@ -16,8 +20,71 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+
+interface FormData {
+  name: string;
+  registrationNumber: string;
+  branch: string;
+  year: string;
+  residence: string;
+  email: string;
+  tid: string;
+  screenshot: File | null;
+}
 
 export default function Register() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    registrationNumber: "",
+    branch: "",
+    year: "",
+    residence: "",
+    email: "",
+    tid: "",
+    screenshot: null,
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, residence: value }));
+  };
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
+    setFormData((prev) => ({ ...prev, screenshot: file }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formDataToSend = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      if (value !== null) {
+        formDataToSend.append(key, value);
+      }
+    });
+
+    try {
+      await axios.post("/registration/new", formDataToSend, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      navigate(`/result?result=success`);
+    } catch (error) {
+      console.error("Registration error:", error);
+      navigate(`/result?result=failure`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="mt-20 max-w-[80rem] mx-auto py-12 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -53,93 +120,137 @@ export default function Register() {
         <div>
           <Card className="flex flex-col border-2 border-brand bg-brand/10">
             <CardHeader>
-              <CardTitle className="text-brand">Registration Form (In-House)</CardTitle>
+              <CardTitle className="text-brand">
+                Registration Form (In-House)
+              </CardTitle>
             </CardHeader>
-            <CardContent className="flex-1 space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="Enter your name" />
+            <form onSubmit={handleSubmit}>
+              <CardContent className="flex-1 space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input
+                      id="name"
+                      placeholder="Enter your name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="registrationNumber">
+                      Registration Number
+                    </Label>
+                    <Input
+                      id="registrationNumber"
+                      placeholder="Enter your registration number"
+                      value={formData.registrationNumber}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="branch">Branch</Label>
+                    <Input
+                      id="branch"
+                      placeholder="Enter your branch"
+                      value={formData.branch}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="year">Year of Study</Label>
+                    <Input
+                      id="year"
+                      placeholder="Enter your year of study"
+                      value={formData.year}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="registration-number">
-                    Registration Number
+                  <Label htmlFor="residence">Residence</Label>
+                  <Select onValueChange={handleSelectChange}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select your residence" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="hosteller">Hosteller</SelectItem>
+                      <SelectItem value="day-scholar">Day Scholar</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Outlook ID</Label>
+                  <Input
+                    id="email"
+                    placeholder="Enter your Outlook ID"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <Separator />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="tid">Transaction ID</Label>
+                    <Input
+                      id="tid"
+                      placeholder="Enter your transaction ID"
+                      value={formData.tid}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="screenshot">Payment Screenshot</Label>
+                    <Input
+                      id="screenshot"
+                      type="file"
+                      onChange={handleFileChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Label
+                    htmlFor="agree-to-event-agreement"
+                    className="text-sm text-pretty text-muted-foreground"
+                  >
+                    By registering, you acknowledge that your provided
+                    information will be used in accordance with the relevant SWJ
+                    guidelines.
                   </Label>
-                  <Input
-                    id="registration-number"
-                    placeholder="Enter your registration number"
-                  />
                 </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="branch">Branch</Label>
-                  <Input id="branch" placeholder="Enter your branch" />
+                <div className="flex flex-col items-center justify-center">
+                  <a href="upi://pay?pa=AICMUJ@icici&pn=MUJ&tr=EZYS9116629865&cu=INR&mc=null">
+                    <img
+                      src="/qr.png"
+                      width={200}
+                      height={200}
+                      alt="Payment QR Code"
+                      style={{ aspectRatio: "1/1", objectFit: "cover" }}
+                    />
+                  </a>
+                  <Label htmlFor="qr-code" className="text-sm mt-2">
+                    Scan or click on the QR to pay
+                  </Label>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="year">Year of Study</Label>
-                  <Input id="year" placeholder="Enter your year of study" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="residence">Residence</Label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select your residence" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="hosteller">Hosteller</SelectItem>
-                    <SelectItem value="day-scholar">Day Scholar</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="outlook-id">Outlook ID</Label>
-                <Input id="outlook-id" placeholder="Enter your Outlook ID" />
-              </div>
-              <Separator />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="transaction-id">Transaction ID</Label>
-                  <Input
-                    id="transaction-id"
-                    placeholder="Enter your transaction ID"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="payment-screenshot">Payment Screenshot</Label>
-                  <Input id="payment-screenshot" type="file" />
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <Label
-                  htmlFor="agree-to-event-agreement"
-                  className="text-sm text-pretty text-muted-foreground"
+              </CardContent>
+              <CardFooter>
+                <Button
+                  type="submit"
+                  className="w-full rounded-full"
+                  disabled={isSubmitting}
                 >
-                  By registering, you acknowledge that your provided information
-                  will be used in accordance with the relevant SWJ guidelines.
-                </Label>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <a href="upi://pay?pa=AICMUJ@icici&pn=MUJ&tr=EZYS9116629865&cu=INR&mc=null">
-                  <img
-                    src="/qr.png"
-                    width={200}
-                    height={200}
-                    alt="Payment QR Code"
-                    style={{ aspectRatio: "1/1", objectFit: "cover" }}
-                  />
-                </a>
-                <Label htmlFor="qr-code" className="text-sm mt-2">
-                  Scan or click on the QR to pay
-                </Label>
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button type="submit" className="w-full rounded-full">
-                Submit
-              </Button>
-            </CardFooter>
+                  {isSubmitting ? "Submitting..." : "Submit"}
+                </Button>
+              </CardFooter>
+            </form>
           </Card>
         </div>
       </div>
