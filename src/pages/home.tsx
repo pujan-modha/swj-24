@@ -1,6 +1,6 @@
 import Hero from "../sections/hero";
 import Overview from "@/sections/overview.jsx";
-import Sponsors from "@/sections/sponsors.jsx";
+// import Sponsors from "@/sections/sponsors.jsx";
 import Objectives from "@/sections/objectives.jsx";
 import Faq from "@/sections/faq.jsx";
 import Contact from "@/sections/contact.jsx";
@@ -14,7 +14,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 my-16 lg:my-4">
           <Overview />
-          <Sponsors />
+          {/* <Sponsors /> */}
           {/*<Timeline />*/}
           <Objectives />
           {/*<Mentors />*/}
