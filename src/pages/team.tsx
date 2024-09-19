@@ -4,7 +4,7 @@ import tdata from '../data/teacher_data.json'
 
 import { useState } from 'react'
 
-export default function () {
+export default function Team () {
     const [isStudent, setIsStudent] = useState(true)
     return (
         <div className="mt-20 max-w-[80rem] mx-auto py-12 px-4">
@@ -22,7 +22,7 @@ export default function () {
                                 Convenor
                             </h2>
                             <div className="mt-1 border border-brand opacity-10 mb-10"></div>
-                            <div className="grid md:grid-cols-3 grid-cols-1 gap-16 mx-auto justify-center">
+                            <div className="grid md:grid-cols-4 grid-cols-1 gap-16 mx-auto justify-center">
                                 {data.filter(item => item.Committee.includes("Convenor")).map((item, index) => <TeamMember key={index} name={item.Name} position={item['Team name and position']} image={item.image} links={{
                                     ig: item['Instagram '],
                                     gh: item['github'],
