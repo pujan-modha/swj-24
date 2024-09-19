@@ -1,5 +1,51 @@
 [
     {
+        "Name": "Convenor A",
+        "Committee": "Convenor",
+        "Team name and position": "",
+        "image": "https://cs.ieeemuj.com/_next/image?url=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fuser-profile-icon-vector-avatar-600nw-2220431045.jpg&w=640&q=75"
+    },
+    {
+        "Name": "Convenor B",
+        "Committee": "Convenor",
+        "Team name and position": "",
+        "image": "https://cs.ieeemuj.com/_next/image?url=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fuser-profile-icon-vector-avatar-600nw-2220431045.jpg&w=640&q=75"
+    },
+    {
+        "Name": "Convenor C",
+        "Committee": "Convenor",
+        "Team name and position": "",
+        "image": "https://cs.ieeemuj.com/_next/image?url=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fuser-profile-icon-vector-avatar-600nw-2220431045.jpg&w=640&q=75"
+    },
+
+    {
+        "Name": "Arunabha Mukhopadhyay",
+        "Committee": "Executive Committee",
+        "Team name and position": "Technical Team",
+        "image": "https://cs.ieeemuj.com/_next/image?url=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fuser-profile-icon-vector-avatar-600nw-2220431045.jpg&w=640&q=75"
+    },
+    {
+        "Name": "Pujan Modha",
+        "Committee": "Executive Committee",
+        "Team name and position": "Technical Team",
+        "image": "https://cs.ieeemuj.com/_next/image?url=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fuser-profile-icon-vector-avatar-600nw-2220431045.jpg&w=640&q=75"
+    },
+    {
+        "Name": "Udayan Panwar",
+        "Committee": "Core Committee",
+        "Team name and position": "Technical Team",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQHvTPEiBsSBKQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722967422576?e=1732147200&v=beta&t=MlR3apld-7IczrkaQX-jYrzh36IajoWBBovTQ21rM8w",
+        "linkedin": "https://www.linkedin.com/in/udayan-pawar-30b476282/"
+    },
+    {
+        "Name": "Abhinav Mondal",
+        "Committee": "Core Committee",
+        "Team name and position": "Technical Team",
+        "image": "https://images.prismic.io/swj2024/ZucSirVsGrYSvYBo_IMG-20240226-WA0002-ABHINAV.jpg?auto=format,compress",
+        "linkedin": "https://www.linkedin.com/in/abhinav-mondal-350b3a273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "github": "https://github.com/abh80"
+    },
+    {
         "Name": "Akash Mukherjee",
         "Committee": "Executive Committee",
         "Team name and position": "Co Lead Marketing",
@@ -339,14 +385,6 @@
         "Instagram ": "agrimajoshii._",
         "linkedin": "Agrima Joshi ",
         "github": "NA"
-    },
-    {
-        "Name": "Abhinav Mondal",
-        "Committee": "Core Committee",
-        "Team name and position": "Technical Team",
-        "image": "https://images.prismic.io/swj2024/ZucSirVsGrYSvYBo_IMG-20240226-WA0002-ABHINAV.jpg?auto=format,compress",
-        "linkedin": "https://www.linkedin.com/in/abhinav-mondal-350b3a273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "github": "https://github.com/abh80"
     },
     {
         "Name": "Lavanya Sharma",
