@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, ChangeEvent } from "react";
 import axios from "axios";
 import {
