@@ -71,9 +71,13 @@ export default function Register() {
     });
 
     try {
-      await axios.post("/registration/new", formDataToSend, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      await axios.post(
+        "https://swj-server.ayushcodings.me/api/v1/registration/new",
+        formDataToSend,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       navigate(`/result?result=success`);
     } catch (error) {
       console.error("Registration error:", error);
