@@ -5,6 +5,7 @@ import Objectives from "@/sections/objectives.jsx";
 import Faq from "@/sections/faq.jsx";
 import Contact from "@/sections/contact.jsx";
 import Timeline from "@/sections/timeline.tsx";
+// import Ambassador from "@/sections/ambassador";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 my-16 lg:my-4">
           <Overview />
+          {/* <Ambassador /> */}
           {/* <Sponsors /> */}
           <Timeline />
           <Objectives />
