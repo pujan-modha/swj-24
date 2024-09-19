@@ -1,13 +1,14 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
-// import Team from "./pages/team.jsx";
+import Team from "./pages/team.jsx";
 import Navbar from "./sections/navbar";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import Footer from "./sections/footer";
 import ProgressBar from "react-scroll-progress-bar";
 import Register from "./pages/register";
 import RegistrationResult from "./pages/result";
+import Credit from "./pages/credit";
 
 export default function App() {
   return (
@@ -21,9 +22,10 @@ export default function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
-              {/* <Route path="/team" element={<Team />} /> */}
+              <Route path="/team" element={<Team />} />
               <Route path="/register" element={<Register />} />
               <Route path="/result" element={<RegistrationResult />} />
+              <Route path="/credits" element={<Credit />} />
             </Routes>
           </BrowserRouter>
           <div className="relative bottom-0 z-50">
