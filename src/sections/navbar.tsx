@@ -129,7 +129,7 @@ export default function Navbar() {
                 side="left"
                 className="border-none bg-background w-screen p-4"
               >
-                <SheetTitle/>
+                <SheetTitle />
                 <div className="border-b border-current-line pb-4">
                   <a
                     href="/"
@@ -160,6 +160,11 @@ export default function Navbar() {
                       <SheetClose asChild>
                         <FlipLink href="/team">Team</FlipLink>
                       </SheetClose>
+                      <SheetClose asChild>
+                        <FlipLink href="/campus-ambassador">
+                          Campus-Ambassador
+                        </FlipLink>
+                      </SheetClose>
                     </nav>
                   </SheetClose>
                   <div className="flex flex-col gap-4">
@@ -170,7 +175,9 @@ export default function Navbar() {
                       </span>
                     </Button>
                     <Button className="w-full hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
-                      <a href="/register">Out-House</a>
+                      <a href="https://unstop.com/competitions/startup-weekend-jaipur-24-manipal-university-jaipur-1161081">
+                        Out-House
+                      </a>
                       <span>
                         <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                       </span>
@@ -190,6 +197,7 @@ export default function Navbar() {
             <FlipLink href="#timeline">Timeline</FlipLink>
             <FlipLink href="#mentors">Mentors</FlipLink>
             <FlipLink href="/team">Team</FlipLink>
+            <FlipLink href="/campus-ambassador">Campus-Ambassador</FlipLink>
           </section>
         </div>
       </div>
