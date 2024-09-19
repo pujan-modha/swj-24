@@ -46,19 +46,12 @@ export default function CampusAmbassador() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formDataToSend = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      if (value !== null) {
-        formDataToSend.append(key, value);
-      }
-    });
-
     try {
       await axios.post(
         "https://swj-server.ayushcodings.me/api/v1/ambassador/new",
-        formDataToSend,
+        formData,
         {
-          headers: { "Content-Type": "multipart/form-data" },
+          headers: { "Content-Type": "application/json" },
         }
       );
       navigate(`/result?result=success`);
@@ -193,7 +186,7 @@ export default function CampusAmbassador() {
                   <Input
                     id="address"
                     placeholder="Enter your current address"
-                    value={formData.email}
+                    value={formData.address}
                     onChange={handleInputChange}
                     required
                   />
