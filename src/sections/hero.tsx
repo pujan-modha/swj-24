@@ -29,7 +29,9 @@ export default function Hero() {
             </span>
           </Button>
           <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-            <a href="/register">Out-House</a>
+            <a href="https://unstop.com/competitions/startup-weekend-jaipur-24-manipal-university-jaipur-1161081">
+              Out-House
+            </a>
             <span>
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </span>
