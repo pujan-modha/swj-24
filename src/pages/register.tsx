@@ -25,6 +25,7 @@ interface FormData {
   registrationNumber: string;
   branch: string;
   year: string;
+  phone: string;
   residence: string;
   email: string;
   tid: string;
@@ -39,6 +40,7 @@ export default function Register() {
     branch: "",
     year: "",
     residence: "",
+    phone: "",
     email: "",
     tid: "",
     screenshot: null,
@@ -173,6 +175,16 @@ export default function Register() {
                       required
                     />
                   </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    placeholder="Enter your Phone number"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="residence">Residence</Label>
