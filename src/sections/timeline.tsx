@@ -5,9 +5,9 @@ const Timeline = () => {
     <div id="timeline">
       {/*replace the hr tags with something cool later down the line like a moving beam on a trace or something idk*/}
       <Title title="Timeline" />
-      <div className="bg-dracula overflow-hidden">
+      <div className="overflow-hidden">
         <div
-          className="bg-dracula text-dracxt font-mono justify-center items-center flex"
+          className="tabular-nums justify-center items-center flex"
           data-aos="fade-up"
         >
           {/*component*/}

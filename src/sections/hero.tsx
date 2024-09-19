@@ -2,18 +2,27 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
     <section className="min-h-[100svh] w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl m-auto">
       <div className="mt-24 lg:my-auto">
+        <div className="flex items-center gap-4">
+          <img
+            src="/google-for-startups.svg"
+            alt="Google for Startups Logo"
+            className="w-48 h-auto"
+          />
+          <FontAwesomeIcon icon={faX} className="text-foreground/50 -ml-2" />
+          <img
+            src="/aic.webp"
+            alt="Atal Incubation Center Logo"
+            className="h-16 w-auto"
+          />
+        </div>
         <img
-          src="/google-for-startups.svg"
-          alt="Google for Startups Logo"
-          className="w-48 h-auto pb-2"
-        />
-        <img
+
           src="/logo-main.png"
           alt="Startup Weekend Jaipur Logo"
           className="w-96 h-auto"
