@@ -12,7 +12,7 @@ import {
 } from "@/components/sheet";
 
 const DURATION = 0.2;
-const STAGGER = 0.02;
+const STAGGER = 0.03;
 
 const FlipLink = ({
   children,
@@ -26,9 +26,9 @@ const FlipLink = ({
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="block overflow-hidden hover:text-brand duration-300 relative text-xl font-semibold uppercase whitespace-nowrap"
+      className="block overflow-hidden hover:text-brand duration-300 relative text-lg font-semibold uppercase whitespace-nowrap"
       style={{
-        lineHeight: 1,
+        lineHeight: 0.8,
       }}
     >
       <div>
