@@ -9,6 +9,7 @@ import ProgressBar from "react-scroll-progress-bar";
 import Register from "./pages/register";
 import RegistrationResult from "./pages/result";
 import Credit from "./pages/credit";
+import CampusAmbassador from "./pages/ambassador.js";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/result" element={<RegistrationResult />} />
               <Route path="/credits" element={<Credit />} />
+              <Route path="/campus-ambassador" element={<CampusAmbassador />} />
             </Routes>
           </BrowserRouter>
           <div className="relative bottom-0 z-50">
