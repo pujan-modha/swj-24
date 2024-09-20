@@ -218,7 +218,6 @@ export default function Register() {
                     placeholder="Enter the Referral name (if applicable)"
                     value={formData.referral}
                     onChange={handleInputChange}
-                    required
                   />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
