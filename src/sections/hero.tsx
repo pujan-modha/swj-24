@@ -22,7 +22,6 @@ export default function Hero() {
           />
         </div>
         <img
-
           src="/logo-main.png"
           alt="Startup Weekend Jaipur Logo"
           className="w-96 h-auto"
@@ -30,8 +29,8 @@ export default function Hero() {
         <p className="text-base md:text-lg text-foreground my-4 md:my-6">
           {`"We built a company in 54 hours, what did you do this weekend?"`}
         </p>
-        <div className="flex flex-row gap-4">
-          <Button className="hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
+        <div className="flex flex-row flex-wrap gap-4">
+          <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
             <a href="/register">In-House</a>
             <span>
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
@@ -41,6 +40,12 @@ export default function Hero() {
             <a href="https://unstop.com/competitions/startup-weekend-jaipur-24-manipal-university-jaipur-1161081">
               Out-House
             </a>
+            <span>
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            </span>
+          </Button>
+          <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+            <a href="/campus-ambassador">Campus Ambassador</a>
             <span>
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </span>
