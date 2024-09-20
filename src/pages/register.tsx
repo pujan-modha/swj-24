@@ -201,10 +201,10 @@ export default function Register() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Outlook ID</Label>
+                  <Label htmlFor="email">Email ID</Label>
                   <Input
                     id="email"
-                    placeholder="Enter your Outlook ID"
+                    placeholder="Enter your Email ID"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
