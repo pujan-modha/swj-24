@@ -29,6 +29,7 @@ interface FormData {
   residence: string;
   email: string;
   tid: string;
+  referral: string;
   screenshot: File | null;
 }
 
@@ -43,6 +44,7 @@ export default function Register() {
     phone: "",
     email: "",
     tid: "",
+    referral: "",
     screenshot: null,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -209,6 +211,16 @@ export default function Register() {
                   />
                 </div>
                 <Separator />
+                <div className="space-y-2">
+                  <Label htmlFor="tid">Referral</Label>
+                  <Input
+                    id="referral"
+                    placeholder="Enter the Referral name (if applicable)"
+                    value={formData.referral}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="tid">Transaction ID</Label>

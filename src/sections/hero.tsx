@@ -18,7 +18,7 @@ export default function Hero() {
           <img
             src="/aic.webp"
             alt="Atal Incubation Center Logo"
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
         </div>
         <img
