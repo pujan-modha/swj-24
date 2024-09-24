@@ -32,6 +32,13 @@ const Sponsors = () => {
             className="w-24 h-auto"
           />
         </Slider.Slide>
+        <Slider.Slide>
+          <img
+            src="/sbi.webp"
+            alt="State Bank of India"
+            className="w-24 h-auto"
+          />
+         </Slider.Slide>
       </Slider>
       <div>
         <Title title="Partners" />

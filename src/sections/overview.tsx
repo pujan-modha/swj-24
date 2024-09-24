@@ -1,6 +1,9 @@
+import Title from "@/components/title";
+
 const Overview = () => {
   return (
     <div id="overview">
+      <Title title="Overview" />
       <div className="grid lg:grid-cols-10 gap-8">
         <div className="md:col-span-5">
           <div className="bg-brand/10 border-2 border-brand rounded-md hover:bg-transparent duration-300">
@@ -11,10 +14,7 @@ const Overview = () => {
             />
           </div>
         </div>
-        <div className="text-lg md:col-span-5">
-          <h2 className="font-bold text-brand mb-10 text-center lg:text-left text-5xl uppercase">
-            Overview
-          </h2>
+        <div className="text-lg md:col-span-5 my-auto">
           <p className="text-muted-foreground mb-6">
             Startup Weekend Jaipur 🚀 is a three-day program where aspiring
             entrepreneurs can experience the startup life.
