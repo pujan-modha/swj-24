@@ -3,59 +3,108 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faX } from "@fortawesome/free-solid-svg-icons";
+// import Slider from "react-infinite-logo-slider";
 
 export default function Hero() {
   return (
-    <section className="min-h-[100svh] w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl m-auto">
-      <div className="mt-24 lg:my-auto">
-        <div className="flex items-center gap-4">
+    <div className="flex flex-col h-[100svh] m-auto gap-8">
+      <section className="m-auto w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl">
+        <div className="mt-24 lg:my-auto">
+          <div className="flex items-center gap-4 mb-4">
+            <img
+              src="/aic.webp"
+              alt="Atal Incubation Center Logo"
+              className="h-20 w-auto"
+            />
+            <FontAwesomeIcon icon={faX} className="text-foreground/50" />
+            <img
+              src="/sbi.webp"
+              alt="State Bank of India Logo"
+              className="h-12 w-auto"
+            />
+          </div>
           <img
             src="/google-for-startups.svg"
             alt="Google for Startups Logo"
             className="w-48 h-auto"
           />
-          <FontAwesomeIcon icon={faX} className="text-foreground/50 -ml-2" />
           <img
-            src="/aic.webp"
-            alt="Atal Incubation Center Logo"
-            className="h-20 w-auto"
+            src="/logo-main.png"
+            alt="Startup Weekend Jaipur Logo"
+            className="w-96 h-auto"
           />
+          <p className="text-base md:text-lg text-foreground my-4 md:my-6">
+            {`"We built a company in 54 hours, what did you do this weekend?"`}
+          </p>
+          <div className="flex flex-row flex-wrap gap-4">
+            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+              <a href="/register">In-House</a>
+              <span>
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </span>
+            </Button>
+            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+              <a href="https://unstop.com/competitions/startup-weekend-jaipur-24-manipal-university-jaipur-1161081">
+                Out-House
+              </a>
+              <span>
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </span>
+            </Button>
+            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+              <a href="/campus-ambassador">Campus Ambassador</a>
+              <span>
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </span>
+            </Button>
+          </div>
         </div>
-        <img
-          src="/logo-main.png"
-          alt="Startup Weekend Jaipur Logo"
-          className="w-96 h-auto"
-        />
-        <p className="text-base md:text-lg text-foreground my-4 md:my-6">
-          {`"We built a company in 54 hours, what did you do this weekend?"`}
-        </p>
-        <div className="flex flex-row flex-wrap gap-4">
-          <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-            <a href="/register">In-House</a>
-            <span>
-              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-            </span>
-          </Button>
-          <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-            <a href="https://unstop.com/competitions/startup-weekend-jaipur-24-manipal-university-jaipur-1161081">
-              Out-House
-            </a>
-            <span>
-              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-            </span>
-          </Button>
-          <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-            <a href="/campus-ambassador">Campus Ambassador</a>
-            <span>
-              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-            </span>
-          </Button>
+        <div>
+          <ShuffleGrid />
         </div>
-      </div>
-      <div>
-        <ShuffleGrid />
-      </div>
-    </section>
+      </section>
+      {/* <div className="h-14 w-full mb-auto">
+        <Slider
+          // width="250px"
+          duration={50}
+          pauseOnHover={false}
+          blurBorders={true}
+          blurBoderColor={"#282A36"}
+        >
+          <Slider.Slide>
+            <img
+              src="/muj.webp"
+              alt="Manipal University Jaipur"
+              className="w-24 h-auto"
+            />
+          </Slider.Slide>
+          <Slider.Slide>
+            <img src="/aic.webp" alt="AIC MUJ" className="w-24 h-auto" />
+          </Slider.Slide>
+          <Slider.Slide>
+            <img
+              src="/easemytrip.webp"
+              alt="EaseMyTrip"
+              className="w-24 h-auto"
+            />
+          </Slider.Slide>
+          <Slider.Slide>
+            <img
+              src="/globalhues.webp"
+              alt="TheGlobalHues"
+              className="w-24 h-auto"
+            />
+          </Slider.Slide>
+          <Slider.Slide>
+            <img
+              src="/sbi.webp"
+              alt="State Bank of India"
+              className="w-24 h-auto"
+            />
+          </Slider.Slide>
+        </Slider>
+      </div> */}
+    </div>
   );
 }
 
