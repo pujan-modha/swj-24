@@ -7,7 +7,7 @@ import { faArrowRight, faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col h-[100svh] m-auto gap-8">
+    <div className="flex flex-col min-h-[100svh] m-auto gap-8">
       <section className="m-auto w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4 lg:gap-8 max-w-7xl">
         <div className="mt-24 lg:my-auto">
           <div className="flex items-center gap-4 mb-4">
