@@ -39,7 +39,7 @@ export function CouponPopup({ onClose }: CouponPopupProps) {
           ) : coupon ? (
             <>
               <p className="mb-4">
-                Share this exclusive coupon code at our desk and get a
+                Share this exclusive coupon code at the SWJ desk and get a
                 Surprise!!
               </p>
               <p className="text-2xl font-bold text-center p-4 bg-primary text-primary-foreground rounded">

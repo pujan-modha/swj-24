@@ -38,13 +38,13 @@ export default function Home() {
 
     const hasSeenPopup = localStorage.getItem("hasSeenPopup");
     if (!hasSeenPopup) {
+      localStorage.setItem("hasSeenPopup", "true");
       setShowPopup(true);
     }
   }, []);
 
   const handleClosePopup = () => {
     setShowPopup(false);
-    localStorage.setItem("hasSeenPopup", "true");
   };
 
   return (
