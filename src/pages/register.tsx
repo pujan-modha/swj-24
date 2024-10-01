@@ -1,8 +1,10 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import axios from "axios";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import AOS from "aos";
+import { Link } from "react-router-dom";
+import { Info } from "lucide-react";
 import "aos/dist/aos.css";
 
 import {
@@ -71,7 +73,27 @@ export default function Register() {
     referral: "",
     screenshot: null,
   });
+  const [full, setFull] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    getRegistrationCount().then((count) => {
+      if (count >= 125) {
+        setFull(true);
+      }
+    });
+  }, []);
+
+  const getRegistrationCount = async () => {
+    try {
+      const res = await axios.get(
+        "https://swj-server.ayushcodings.me/api/v1/registration/count"
+      );
+      return res.data.data;
+    } catch (error) {
+      console.error("Registration count error:", error);
+    }
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -114,6 +136,34 @@ export default function Register() {
       setIsSubmitting(false);
     }
   };
+
+  if (full) {
+    return (
+      <div className="min-h-screen flex items-center justify-center  p-4">
+        <div className="w-full border-2 border-brand bg-brand/10 max-w-md rounded-lg shadow-md overflow-hidden">
+          <div className="p-6 ">
+            <div className="flex flex-col items-center space-y-4">
+              <Info className="w-16 h-16 text-gray-200" />
+              <h2 className="text-2xl font-bold text-center mb-4">
+                Registration Window Closed
+              </h2>
+              <p className="text-center text-white">
+                We're sorry, but the registration window for Startup Weekend
+                Jaipur has been closed.
+              </p>
+            </div>
+          </div>
+          <div className="px-6 py-4 ">
+            <Link to="/">
+              <Button className="w-full font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
+                Return to Home
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="mt-20 max-w-[80rem] mx-auto py-12 px-4">
