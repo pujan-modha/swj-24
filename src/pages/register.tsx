@@ -78,7 +78,7 @@ export default function Register() {
 
   useEffect(() => {
     getRegistrationCount().then((count) => {
-      if (count >= 125) {
+      if (count >= 130) {
         setFull(true);
       }
     });
