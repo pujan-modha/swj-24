@@ -38,7 +38,13 @@ const Sponsors = () => {
             alt="State Bank of India"
             className="w-24 h-auto"
           />
-         </Slider.Slide>
+        </Slider.Slide>
+        <Slider.Slide>
+          <img src="/brex.jpg" alt="Brex" className="w-24 h-auto" />
+        </Slider.Slide>
+        <Slider.Slide>
+          <img src="/deel.webp" alt="Deel" className="w-24 h-auto" />
+        </Slider.Slide>
       </Slider>
       <div>
         <Title title="Partners" />
