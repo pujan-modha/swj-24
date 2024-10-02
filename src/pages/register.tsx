@@ -73,8 +73,8 @@ export default function Register() {
     referral: "",
     screenshot: null,
   });
-  const [full, setFull] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [full, setFull] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     getRegistrationCount().then((count) => {
