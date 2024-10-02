@@ -40,10 +40,10 @@ const Sponsors = () => {
           />
         </Slider.Slide>
         <Slider.Slide>
-          <img src="/brex.jpg" alt="Brex" className="w-24 h-auto" />
+          <img src="/brex.png" alt="Brex" className="w-24 h-auto" />
         </Slider.Slide>
         <Slider.Slide>
-          <img src="/deel.webp" alt="Deel" className="w-24 h-auto" />
+          <img src="/deel.png" alt="Deel" className="w-24 h-auto" />
         </Slider.Slide>
       </Slider>
       <div>
