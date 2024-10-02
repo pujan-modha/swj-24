@@ -149,7 +149,8 @@ export default function Register() {
               </h2>
               <p className="text-center text-white">
                 We're sorry, but the registration window for Startup Weekend
-                Jaipur has been closed.
+                Jaipur has been closed. Any payments made to the QR code will
+                not be refunded.
               </p>
             </div>
           </div>
