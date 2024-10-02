@@ -74,12 +74,12 @@ export default function Register() {
     screenshot: null,
   });
   const [full, setFull] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(true);
 
   useEffect(() => {
     getRegistrationCount().then((count) => {
-      if (count >= 125) {
-        setFull(true);
+      if (count < 125) {
+        setFull(false);
       }
     });
   }, []);
