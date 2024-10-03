@@ -138,9 +138,7 @@ export default function VotingForIdeas() {
   return (
     <>
       <div className="container mx-auto p-6 mt-24 min-h-[100svh]">
-        <h1 className="text-4xl font-bold mb-8 text-center">
-          Vote Ideas
-        </h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Vote for Ideas</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ideas.map((idea, index) => (
             <motion.div
@@ -162,7 +160,10 @@ export default function VotingForIdeas() {
                   <p className="text-sm">{idea.description}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full rounded-full" onClick={() => handleVote(idea)}>
+                  <Button
+                    className="w-full rounded-full"
+                    onClick={() => handleVote(idea)}
+                  >
                     Vote for This Idea
                   </Button>
                 </CardFooter>
@@ -174,7 +175,9 @@ export default function VotingForIdeas() {
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogContent className="border-2 border-brand">
             <DialogHeader>
-              <DialogTitle className="text-brand">Confirm Your Vote</DialogTitle>
+              <DialogTitle className="text-brand">
+                Confirm Your Vote
+              </DialogTitle>
               <DialogDescription>
                 Please enter your participant ID to vote for "
                 {selectedIdea?.title}".
@@ -187,11 +190,14 @@ export default function VotingForIdeas() {
               onChange={(e) => setParticipantId(e.target.value)}
             />
             <DialogFooter>
-              <Button className="rounded-full" onClick={() => setIsDialogOpen(false)}>
+              <Button
+                className="rounded-full"
+                onClick={() => setIsDialogOpen(false)}
+              >
                 Cancel
               </Button>
               <Button
-              className="rounded-full"
+                className="rounded-full"
                 onClick={confirmVote}
                 disabled={!participantId || isConfirming}
               >
