@@ -10,6 +10,8 @@ import Register from "./pages/register";
 import RegistrationResult from "./pages/result";
 import Credit from "./pages/credit";
 import CampusAmbassador from "./pages/ambassador.js";
+import IdeaSubmission from "./pages/submission.js";
+import VotingForIdeas from "./pages/voting.js";
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
               <Route path="/result" element={<RegistrationResult />} />
               <Route path="/credits" element={<Credit />} />
               <Route path="/campus-ambassador" element={<CampusAmbassador />} />
+              <Route path="/idea-submission" element={< IdeaSubmission round={1} />} />
+              <Route path="/voting" element={<VotingForIdeas />} />
             </Routes>
           </BrowserRouter>
           <div className="relative bottom-0 z-50">
