@@ -286,21 +286,22 @@ const Timeline = () => {
               {/*left*/}
               <div className="flex flex-row-reverse md:contents">
                 <div
-                  className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
-                  data-aos="fade-right"
+                    className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                    data-aos="fade-right"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
                     1:00 pm - 2:00 pm
                   </h3>
-                  <p className="leading-tight md:text-right">Lunch</p>
+                  <p className="leading-tight md:text-right"></p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
-                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none"></div>
+                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none">Lunch</div>
                   </div>
                   <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
                 </div>
               </div>
+
               {/*right*/}
               <div className="flex md:contents">
                 <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
