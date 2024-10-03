@@ -171,6 +171,82 @@ const Timeline = () => {
               {/*left*/}
               <div className="flex flex-row-reverse md:contents">
                 <div
+                    className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                    data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    2:30 pm
+                  </h3>
+                  <p className="leading-tight md:text-right">Mentoring Session & Progress Evaluation</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                    className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                    data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    5:30 pm
+                  </h3>
+                  <p className="leading-tight">
+                    High Tea & Fun Activity
+                  </p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                    className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                    data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    8:00 pm
+                  </h3>
+                  <p className="leading-tight md:text-right">Dinner</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                    className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                    data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    11:00 pm
+                  </h3>
+                  <p className="leading-tight">
+                    Resting Period
+                  </p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
                   className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
                   data-aos="fade-right"
                 >
@@ -178,9 +254,9 @@ const Timeline = () => {
                     OCTOBER 06
                   </h3>
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    08:00-09:00
+                    08:00 am
                   </h3>
-                  <p className="leading-tight md:text-right">Pitch Submission</p>
+                  <p className="leading-tight md:text-right">Breakfast</p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
@@ -202,9 +278,9 @@ const Timeline = () => {
                   data-aos="fade-left"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    13:00 - 14:00
+                    10:00 am - 1:30 pm
                   </h3>
-                  <p className="leading-tight">Pitch in Front of Judges</p>
+                  <p className="leading-tight">Pitch submission</p>
                 </div>
               </div>
               {/*left*/}
@@ -214,9 +290,45 @@ const Timeline = () => {
                   data-aos="fade-right"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    14:00 - 15:00
+                    1:00 pm - 2:00 pm
                   </h3>
-                  <p className="leading-tight md:text-right">Results Announcement/Closing Ceremony</p>
+                  <p className="leading-tight md:text-right">Lunch</p>
+                </div>
+                <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+              </div>
+              {/*right*/}
+              <div className="flex md:contents">
+                <div className="col-start-5 col-end-6 mr-5 md:mx-auto relative">
+                  <div className="h-full w-6 flex items-center justify-center">
+                    <div className="h-full w-1 bg-brand pointer-events-none"></div>
+                  </div>
+                  <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
+                </div>
+                <div
+                    className="bg-brand w-full  bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-6 col-end-10 p-4 rounded-lg my-8 mr-auto shadow-md"
+                    data-aos="fade-left"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    2:00 pm - 4:30 pm
+                  </h3>
+                  <p className="leading-tight">Final Pitches to Judges</p>
+                </div>
+              </div>
+              {/*left*/}
+              <div className="flex flex-row-reverse md:contents">
+                <div
+                    className="bg-brand md:text-right  w-full bg-opacity-10 backdrop-blur-0 border-brand border-2 col-start-1 col-end-5 p-4 rounded-lg my-8 ml-auto shadow-md"
+                    data-aos="fade-right"
+                >
+                  <h3 className="font-semibold text-brand text-2xl mb-1">
+                    4:30 pm - 5:30 pm
+                  </h3>
+                  <p className="leading-tight md:text-right">Closing Ceremony & Prize Distribution</p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
