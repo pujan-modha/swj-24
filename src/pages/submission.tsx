@@ -23,7 +23,7 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
 
   return (
     <div className="container mx-auto p-6 min-h-[100svh] mt-24">
-      <Card className="w-full max-w-2xl mx-auto border-2 border-brand">
+      <Card className="w-full max-w-2xl mx-auto border-2 bg-background border-brand">
         <CardHeader>
           <CardTitle className="text-3xl font-bold">Idea Submission</CardTitle>
           <CardDescription>Round {round}</CardDescription>
@@ -33,10 +33,10 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
             {round === 1 ? (
               <>
                 <div className="space-y-2">
-                  <Label htmlFor="userId">User ID</Label>
+                  <Label htmlFor="userId">Participant Code</Label>
                   <Input
                     id="userId"
-                    placeholder="Enter your User ID"
+                    placeholder="Enter your Participant Code"
                     required
                   />
                 </div>
