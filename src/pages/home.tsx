@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import Hero from "../sections/hero";
 import Overview from "@/sections/overview.jsx";
