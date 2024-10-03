@@ -29,10 +29,9 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
         "https://swj-server.ayushcodings.me/api/v1/idea/add",
         { title, description, ownerCode: participantCode }
       );
-      console.log(res.data.data);
       toast({
-        title: "Idea Submitted",
-        description: res.message,
+        title: res.data.data.name,
+        description: `Your idea has been submitted successfully!`,
         variant: "default",
         className: "bg-green-500",
       });
@@ -82,6 +81,7 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
                       id="title"
                       placeholder="Enter the title of your idea"
                       required
+                      value={title}
                       onChange={(e) => setTitle(e.target.value)}
                     />
                   </div>
@@ -91,6 +91,7 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
                       id="description"
                       placeholder="Describe your idea"
                       required
+                      value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       className="min-h-[150px] border-2 border-brand"
                     />

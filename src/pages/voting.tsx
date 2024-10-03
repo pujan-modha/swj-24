@@ -70,7 +70,7 @@ export default function VotingForIdeas() {
       );
       toast({
         title: "Vote Confirmed",
-        description: response.message,
+        description: `Voted as ${response.data.data.name} for ${selectedIdea.title}`,
         variant: "default",
         className: "bg-green-500",
       });
