@@ -23,10 +23,10 @@ const Timeline = () => {
                     OCTOBER 04
                   </h3>
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    09:00
+                    4:00 pm - 5:30 pm
                   </h3>
                   <p className="leading-tight md:text-right">
-                    Inauguration of the event and room allocation
+                    Inauguration Ceremony
                   </p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
@@ -49,9 +49,9 @@ const Timeline = () => {
                   data-aos="fade-left"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    09:30 - 10:40
+                    6:00pm - 7:45pm
                   </h3>
-                  <p className="leading-tight">Ice Breaker Session</p>
+                  <p className="leading-tight">Ice Breaker & Pitching Session</p>
                 </div>
               </div>
               {/*left*/}
@@ -61,9 +61,9 @@ const Timeline = () => {
                   data-aos="fade-right"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    10:40
+                    7:45 pm - 8:00 pm
                   </h3>
-                  <p className="leading-tight md:text-right">Initial Pitch</p>
+                  <p className="leading-tight md:text-right">Voting For Ideas</p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
@@ -85,9 +85,9 @@ const Timeline = () => {
                   data-aos="fade-left"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    13:00-14:00
+                    8:00 pm - 9:00 pm
                   </h3>
-                  <p className="leading-tight">Voting for ideas</p>
+                  <p className="leading-tight">Dinner</p>
                 </div>
               </div>
               {/*left*/}
@@ -97,9 +97,9 @@ const Timeline = () => {
                   data-aos="fade-right"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    14:00
+                    11:00 pm
                   </h3>
-                  <p className="leading-tight md:text-right">Team Formation</p>
+                  <p className="leading-tight md:text-right">Resting Period</p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
@@ -124,9 +124,9 @@ const Timeline = () => {
                     OCTOBER 05
                   </h3>
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    09:00 - 10:00
+                    8:00 am
                   </h3>
-                  <p className="leading-tight">Mentoring Session / Progress Evaluation 1</p>
+                  <p className="leading-tight">Breakfast</p>
 
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Timeline = () => {
                   data-aos="fade-right"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    10:00 - 11:00
+                    10:30 am
                   </h3>
                   <p className="leading-tight md:text-right">Workshop</p>
                 </div>
@@ -161,10 +161,10 @@ const Timeline = () => {
                   data-aos="fade-left"
                 >
                   <h3 className="font-semibold text-brand text-2xl mb-1">
-                    11:00 - 12:00
+                    1:00 pm - 2:00 pm
                   </h3>
                   <p className="leading-tight">
-                    Mentoring Session / Progress Evaluation 2
+                    Lunch
                   </p>
                 </div>
               </div>
