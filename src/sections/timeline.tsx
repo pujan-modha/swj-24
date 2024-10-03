@@ -292,11 +292,11 @@ const Timeline = () => {
                   <h3 className="font-semibold text-brand text-2xl mb-1">
                     1:00 pm - 2:00 pm
                   </h3>
-                  <p className="leading-tight md:text-right"></p>
+                  <p className="leading-tight md:text-right">Lunch</p>
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
-                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none">Lunch</div>
+                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none"></div>
                   </div>
                   <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
                 </div>
