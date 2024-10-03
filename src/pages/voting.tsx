@@ -22,7 +22,7 @@ import { toast } from "@/hooks/use-toast";
 import axios from "axios";
 
 interface Idea {
-  id: string;
+  _id: string;
   name: string;
   title: string;
   description: string;
@@ -37,7 +37,6 @@ export default function VotingForIdeas() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [participantId, setParticipantId] = useState("");
   const [isConfirming, setIsConfirming] = useState(false);
-  const [storedParticipantId, setStoredParticipantId] = useState("");
 
   const handleVote = async (idea: Idea) => {
     setSelectedIdea(idea);
@@ -59,11 +58,10 @@ export default function VotingForIdeas() {
     if (!selectedIdea) return;
 
     setIsConfirming(true);
-    setStoredParticipantId(participantId);
 
     // Simulating a backend API call
     try {
-      const response = await axios.post(
+      const response: any = await axios.post(
         "https://swj-server.ayushcodings.me/api/v1/idea/vote",
         {
           ideaId: selectedIdea._id,
@@ -76,7 +74,7 @@ export default function VotingForIdeas() {
         variant: "default",
         className: "bg-green-500",
       });
-    } catch (error) {
+    } catch (error: any) {
       toast({
         title: "Error",
         description: error.response.data.message,
@@ -86,7 +84,6 @@ export default function VotingForIdeas() {
       setIsConfirming(false);
       setIsDialogOpen(false);
       setParticipantId("");
-      setStoredParticipantId("");
     }
   };
 
