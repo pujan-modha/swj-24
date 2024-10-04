@@ -10,7 +10,7 @@ import Register from "./pages/register";
 import RegistrationResult from "./pages/result";
 import Credit from "./pages/credit";
 import CampusAmbassador from "./pages/ambassador.js";
-import IdeaSubmission from "./pages/submission.js";
+// import IdeaSubmission from "./pages/submission.js";
 import VotingForIdeas from "./pages/voting.js";
 import MentorBooking from "./pages/mentor-booking.js";
 
@@ -31,10 +31,10 @@ export default function App() {
               <Route path="/result" element={<RegistrationResult />} />
               <Route path="/credits" element={<Credit />} />
               <Route path="/campus-ambassador" element={<CampusAmbassador />} />
-              <Route
+              {/* <Route
                 path="/idea-submission"
                 element={<IdeaSubmission round={1} />}
-              />
+              /> */}
               <Route path="/voting" element={<VotingForIdeas />} />
               <Route path="/mentor-booking" element={<MentorBooking />} />
             </Routes>

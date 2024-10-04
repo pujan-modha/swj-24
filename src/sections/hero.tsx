@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faX } from "@fortawesome/free-solid-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 // import Slider from "react-infinite-logo-slider";
 
 export default function Hero() {
@@ -37,17 +37,15 @@ export default function Hero() {
             {`"We built a company in 54 hours, what did you do this weekend?"`}
           </p>
           <div className="flex flex-row flex-wrap gap-4">
-            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+            {/* <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
               <a href="/idea-submission">Idea Submission (Round-1)</a>
               <span>
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
               </span>
-            </Button>
+            </Button> */}
             <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
               <a href="/voting">Vote for Ideas</a>
-              <span>
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-              </span>
+              <span></span>
             </Button>
           </div>
         </div>
