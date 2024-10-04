@@ -60,14 +60,14 @@ export default function Team() {
           >
             Core Committee
           </div>
-          <div
+          {/* <div
             onClick={() => setTeamType("faculty")}
             className={`p-2 font-semibold rounded hover:underline cursor-pointer ${
               teamType === "faculty" ? "bg-brand" : ""
             }`}
           >
             Faculty
-          </div>
+          </div> */}
         </div>
         <div className="h-10"></div>
         {teamType === "convenor" && (
