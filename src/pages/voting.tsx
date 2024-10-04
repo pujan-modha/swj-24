@@ -27,7 +27,9 @@ interface Idea {
   name: string;
   title: string;
   description: string;
-  owner: string;
+  owner: {
+    name: string;
+  };
   ownerCode: string;
   votes: [string];
 }
