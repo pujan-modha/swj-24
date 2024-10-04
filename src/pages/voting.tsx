@@ -35,6 +35,7 @@ interface Idea {
 }
 
 export default function VotingForIdeas() {
+  const [searchParam, setSearchParam] = useState("");
   const [ideas, setIdeas] = useState<Idea[]>([]);
   const [selectedIdea, setSelectedIdea] = useState<Idea | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -90,14 +91,29 @@ export default function VotingForIdeas() {
     }
   };
 
+  const filteredIdeas = ideas.filter((idea) => {
+    return (
+      idea.title.toLowerCase().includes(searchParam.toLowerCase()) ||
+      idea.description.toLowerCase().includes(searchParam.toLowerCase())
+    );
+  });
+
   return (
     <>
       <div className="container mx-auto p-6 mt-24 min-h-[100svh]">
         <h1 className="text-4xl font-bold mb-8 text-center">
-          Voting will start soon
+          Vote for your favorite idea!
         </h1>
+        <div className="flex items-center justify-center mb-5">
+          <Input
+            placeholder="Search"
+            className="text-brand "
+            value={searchParam}
+            onChange={(e) => setSearchParam(e.target.value)}
+          />
+        </div>
         <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6">
-          {ideas.map((idea, index) => (
+          {filteredIdeas.map((idea, index) => (
             <motion.div
               className="mb-6 break-inside-avoid"
               key={idea._id}
@@ -119,7 +135,7 @@ export default function VotingForIdeas() {
                     <p className="text-sm">{idea.description}</p>
                   </ScrollArea>
                 </CardContent>
-                <CardFooter className="hidden">
+                <CardFooter>
                   <Button
                     className="w-full rounded-full"
                     onClick={() => handleVote(idea)}
