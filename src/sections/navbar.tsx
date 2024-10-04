@@ -154,9 +154,9 @@ export default function Navbar() {
                       <SheetClose asChild>
                         <FlipLink href="#timeline">Timeline</FlipLink>
                       </SheetClose>
-                      {/* <SheetClose asChild>
-                        <FlipLink href="#mentors">Mentors</FlipLink>
-                      </SheetClose> */}
+                      <SheetClose asChild>
+                        <FlipLink href="/mentor-booking">Mentors</FlipLink>
+                      </SheetClose>
                       <SheetClose asChild>
                         <FlipLink href="/team">Team</FlipLink>
                       </SheetClose>
@@ -195,7 +195,7 @@ export default function Navbar() {
             <FlipLink href="#overview">Overview</FlipLink>
             <FlipLink href="#sponsors">Sponsors</FlipLink>
             <FlipLink href="#timeline">Timeline</FlipLink>
-            {/* <FlipLink href="#mentors">Mentors</FlipLink> */}
+            <FlipLink href="/mentor-booking">Mentors</FlipLink>
             <FlipLink href="/team">Team</FlipLink>
             {/* <FlipLink href="/campus-ambassador">Campus-Ambassador</FlipLink> */}
           </section>

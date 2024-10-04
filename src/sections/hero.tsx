@@ -47,6 +47,10 @@ export default function Hero() {
               <a href="/voting">Vote for Ideas</a>
               <span></span>
             </Button>
+            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+              <a href="/mentor-booking">Book a Mentor</a>
+              <span></span>
+            </Button>
           </div>
         </div>
         <div>

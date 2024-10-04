@@ -131,7 +131,7 @@ export default function MentorBooking() {
                 <CardContent className="flex-grow">
                   {/* Add more mentor details here if needed */}
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="hidden">
                   <Button
                     className="w-full rounded-full"
                     onClick={() => handleBooking(mentor)}
@@ -147,7 +147,9 @@ export default function MentorBooking() {
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogContent className="border-2 border-brand">
             <DialogHeader>
-              <DialogTitle className="text-brand">Confirm Your Booking</DialogTitle>
+              <DialogTitle className="text-brand">
+                Confirm Your Booking
+              </DialogTitle>
               <DialogDescription>
                 Please enter your team ID to book a session with{" "}
                 {selectedMentor?.name}.
@@ -160,10 +162,17 @@ export default function MentorBooking() {
               onChange={(e) => setTeamId(e.target.value)}
             />
             <DialogFooter>
-              <Button className="rounded-full" onClick={() => setIsDialogOpen(false)}>
+              <Button
+                className="rounded-full"
+                onClick={() => setIsDialogOpen(false)}
+              >
                 Cancel
               </Button>
-              <Button className="rounded-full" onClick={confirmBooking} disabled={!teamId || isBooking}>
+              <Button
+                className="rounded-full"
+                onClick={confirmBooking}
+                disabled={!teamId || isBooking}
+              >
                 {isBooking ? "Booking..." : "Confirm Booking"}
               </Button>
             </DialogFooter>
