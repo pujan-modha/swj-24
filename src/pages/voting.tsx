@@ -96,15 +96,16 @@ export default function VotingForIdeas() {
         <h1 className="text-4xl font-bold mb-8 text-center">
           Voting will start soon
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6">
           {ideas.map((idea, index) => (
             <motion.div
+              className="mb-6 break-inside-avoid"
               key={idea._id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0 }}
             >
-              <Card className="h-full flex flex-col border-2 border-brand bg-background">
+              <Card className="h-min w-full border-2 border-brand bg-background">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold">
                     {idea.title}
@@ -114,7 +115,7 @@ export default function VotingForIdeas() {
                   </p>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <ScrollArea className="h-36">
+                  <ScrollArea>
                     <p className="text-sm">{idea.description}</p>
                   </ScrollArea>
                 </CardContent>
