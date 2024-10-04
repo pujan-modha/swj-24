@@ -6,14 +6,14 @@ import Objectives from "@/sections/objectives.jsx";
 import Faq from "@/sections/faq.jsx";
 import Contact from "@/sections/contact.jsx";
 import Timeline from "@/sections/timeline.tsx";
-import { CouponPopup } from "@/components/coupon-popup";
+// import { CouponPopup } from "@/components/coupon-popup";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -34,16 +34,16 @@ export default function Home() {
       anchorPlacement: "top-bottom",
     });
 
-    const hasSeenPopup = localStorage.getItem("hasSeenPopup");
-    if (!hasSeenPopup) {
-      localStorage.setItem("hasSeenPopup", "true");
-      setShowPopup(true);
-    }
+    // const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+    // if (!hasSeenPopup) {
+    //   localStorage.setItem("hasSeenPopup", "true");
+    //   setShowPopup(true);
+    // }
   }, []);
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
+  // const handleClosePopup = () => {
+  //   setShowPopup(false);
+  // };
 
   return (
     <>
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {showPopup && <CouponPopup onClose={handleClosePopup} />}
+      {/* {showPopup && <CouponPopup onClose={handleClosePopup} />} */}
     </>
   );
 }
