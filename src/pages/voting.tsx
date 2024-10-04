@@ -91,12 +91,14 @@ export default function VotingForIdeas() {
     }
   };
 
-  const filteredIdeas = ideas.filter((idea) => {
-    return (
-      idea.title.toLowerCase().includes(searchParam.toLowerCase()) ||
-      idea.description.toLowerCase().includes(searchParam.toLowerCase())
-    );
-  });
+  const filteredIdeas = ideas
+    .filter((idea) => {
+      return (
+        idea.title.toLowerCase().includes(searchParam.toLowerCase()) ||
+        idea.description.toLowerCase().includes(searchParam.toLowerCase())
+      );
+    })
+    .sort((a, b) => b.votes.length - a.votes.length);
 
   return (
     <>
@@ -129,13 +131,16 @@ export default function VotingForIdeas() {
                   <p className="text-sm text-muted-foreground">
                     By {idea.owner.name}
                   </p>
+                  {/* <p className="text-sm text-muted-foreground">
+                    Total Votes : {idea.votes.length}
+                  </p> */}
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <ScrollArea>
                     <p className="text-sm">{idea.description}</p>
                   </ScrollArea>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="hidden">
                   <Button
                     className="w-full rounded-full"
                     onClick={() => handleVote(idea)}
