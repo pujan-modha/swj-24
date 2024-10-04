@@ -24,7 +24,7 @@ export default function Hero() {
             />
           </div>
           <img
-            src="/google-for-startups.svg"    
+            src="/google-for-startups.svg"
             alt="Google for Startups Logo"
             className="w-48 h-auto"
           />
@@ -43,20 +43,12 @@ export default function Hero() {
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
               </span>
             </Button>
-            {/* <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-              <a href="https://unstop.com/competitions/startup-weekend-jaipur-24-manipal-university-jaipur-1161081">
-                Out-House
-              </a>
+            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
+              <a href="/voting">Vote for Ideas</a>
               <span>
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
               </span>
             </Button>
-            <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-              <a href="/campus-ambassador">Campus Ambassador</a>
-              <span>
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-              </span>
-            </Button> */}
           </div>
         </div>
         <div>

@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
 import axios from "axios";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface Idea {
   _id: string;
@@ -90,7 +91,9 @@ export default function VotingForIdeas() {
   return (
     <>
       <div className="container mx-auto p-6 mt-24 min-h-[100svh]">
-        <h1 className="text-4xl font-bold mb-8 text-center">Vote for Ideas</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          Voting will start soon
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ideas.map((idea, index) => (
             <motion.div
@@ -104,14 +107,16 @@ export default function VotingForIdeas() {
                   <CardTitle className="text-xl font-bold">
                     {idea.title}
                   </CardTitle>
-                  {/* <p className="text-sm text-muted-foreground">
-                    By {idea.name}
-                  </p> */}
+                  <p className="text-sm text-muted-foreground">
+                    By {idea.owner.name}
+                  </p>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-sm">{idea.description}</p>
+                  <ScrollArea className="h-36">
+                    <p className="text-sm">{idea.description}</p>
+                  </ScrollArea>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="hidden">
                   <Button
                     className="w-full rounded-full"
                     onClick={() => handleVote(idea)}

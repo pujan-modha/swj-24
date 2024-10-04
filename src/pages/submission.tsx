@@ -86,11 +86,14 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="description">Description</Label>
+                    <Label htmlFor="description">
+                      Description (500 characters max)
+                    </Label>
                     <Textarea
                       id="description"
                       placeholder="Describe your idea"
                       required
+                      maxLength={500}
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       className="min-h-[150px] border-2 border-brand"
@@ -120,11 +123,14 @@ export default function IdeaSubmission({ round }: IdeaSubmissionProps) {
                     <Input id="file" type="file" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="description">Description</Label>
+                    <Label htmlFor="description">
+                      Description (500 characters max)
+                    </Label>
                     <Textarea
                       id="description"
                       placeholder="Describe your idea"
                       required
+                      maxLength={500}
                       className="min-h-[150px] border-2 border-brand"
                     />
                   </div>
