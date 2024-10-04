@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Hero from "../sections/hero";
 import Overview from "@/sections/overview.jsx";
 import Sponsors from "@/sections/sponsors.jsx";
