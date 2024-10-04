@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {
   Sheet,
   SheetClose,
@@ -154,20 +154,20 @@ export default function Navbar() {
                       <SheetClose asChild>
                         <FlipLink href="#timeline">Timeline</FlipLink>
                       </SheetClose>
-                      <SheetClose asChild>
+                      {/* <SheetClose asChild>
                         <FlipLink href="#mentors">Mentors</FlipLink>
-                      </SheetClose>
+                      </SheetClose> */}
                       <SheetClose asChild>
                         <FlipLink href="/team">Team</FlipLink>
                       </SheetClose>
-                      <SheetClose asChild>
+                      {/* <SheetClose asChild>
                         <FlipLink href="/campus-ambassador">
                           Campus-Ambassador
                         </FlipLink>
-                      </SheetClose>
+                      </SheetClose> */}
                     </nav>
                   </SheetClose>
-                  <div className="flex flex-col gap-4">
+                  {/* <div className="flex flex-col gap-4">
                     <Button className="w-full hover:text-brand hover:bg-brand/10 rounded-full border-2 backdrop-blur-sm bg-brand text-background border-brand duration-300">
                       <a href="/register">In-House</a>
                       <span>
@@ -182,7 +182,7 @@ export default function Navbar() {
                         <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                       </span>
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
               </SheetContent>
             </Sheet>
@@ -195,9 +195,9 @@ export default function Navbar() {
             <FlipLink href="#overview">Overview</FlipLink>
             <FlipLink href="#sponsors">Sponsors</FlipLink>
             <FlipLink href="#timeline">Timeline</FlipLink>
-            <FlipLink href="#mentors">Mentors</FlipLink>
+            {/* <FlipLink href="#mentors">Mentors</FlipLink> */}
             <FlipLink href="/team">Team</FlipLink>
-            <FlipLink href="/campus-ambassador">Campus-Ambassador</FlipLink>
+            {/* <FlipLink href="/campus-ambassador">Campus-Ambassador</FlipLink> */}
           </section>
         </div>
       </div>

@@ -296,7 +296,7 @@ const Timeline = () => {
                 </div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-5">
                   <div className="h-full w-6 flex items-center justify-center">
-                    <div className="h-1/2 mb-auto w-1 bg-brand pointer-events-none"></div>
+                    <div className="h-full mb-auto w-1 bg-brand pointer-events-none"></div>
                   </div>
                   <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-brand bg-opacity-100 backdrop-blur-0 border-brand border-2 shadow"></div>
                 </div>
