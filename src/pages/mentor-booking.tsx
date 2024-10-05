@@ -54,7 +54,7 @@ export default function MentorBooking() {
       );
       toast({
         title: "Success",
-        description: response.data.message,
+        description: `Booked a session for the team ${response.data.data.teamName} with ${selectedMentor.name}.`,
         className: "bg-green-500",
         variant: "default",
       });
