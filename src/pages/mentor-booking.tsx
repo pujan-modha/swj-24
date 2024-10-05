@@ -4,13 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Toaster } from "@/components/ui/toaster";
 import Mentor_details from "../data/mentor_details";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -20,6 +14,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
+import axios from "axios";
 
 interface Mentor {
   id: number;
@@ -36,7 +31,6 @@ export default function MentorBooking() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [teamId, setTeamId] = useState("");
   const [isBooking, setIsBooking] = useState(false);
-  const [storedTeamId, setStoredTeamId] = useState("");
 
   const handleBooking = async (mentor: Mentor) => {
     setSelectedMentor(mentor);
@@ -47,54 +41,33 @@ export default function MentorBooking() {
     if (!selectedMentor) return;
 
     setIsBooking(true);
-    setStoredTeamId(teamId);
 
     // Simulating a backend API call
     try {
-      const response = await new Promise<{ success: boolean; message: string }>(
-        (resolve) =>
-          setTimeout(() => {
-            // Simulating different response codes
-            if (storedTeamId === "12345") {
-              resolve({
-                success: true,
-                message: "Mentor session booked successfully.",
-              });
-            } else if (storedTeamId === "00000") {
-              resolve({
-                success: false,
-                message:
-                  "Your team has already booked a session with this mentor.",
-              });
-            } else {
-              resolve({ success: false, message: "Invalid team ID." });
-            }
-          }, 1000)
+      console.log(teamId, selectedMentor.name);
+      const response: any = await axios.post(
+        "https://swj-server.ayushcodings.me/api/v1/team/bookMentor",
+        {
+          teamCode: teamId,
+          mentor: selectedMentor.name,
+        }
       );
-
-      if (response.success) {
-        toast({
-          title: "Booking Confirmed",
-          description: response.message,
-        });
-      } else {
-        toast({
-          title: "Booking Failed",
-          description: response.message,
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
+      toast({
+        title: "Success",
+        description: response.data.message,
+        className: "bg-green-500",
+        variant: "default",
+      });
+    } catch (error: any) {
       toast({
         title: "Error",
-        description: "An unexpected error occurred. Please try again.",
+        description: error.response.data.message,
         variant: "destructive",
       });
     } finally {
       setIsBooking(false);
       setIsDialogOpen(false);
       setTeamId("");
-      setStoredTeamId("");
     }
   };
 
@@ -128,9 +101,6 @@ export default function MentorBooking() {
                     {mentor.expertise}
                   </p>
                 </CardHeader>
-                <CardContent className="flex-grow">
-                  {/* Add more mentor details here if needed */}
-                </CardContent>
                 <CardFooter className="hidden">
                   <Button
                     className="w-full rounded-full"
@@ -169,7 +139,7 @@ export default function MentorBooking() {
                 Cancel
               </Button>
               <Button
-                className="rounded-full"
+                className="rounded-full mb-2"
                 onClick={confirmBooking}
                 disabled={!teamId || isBooking}
               >
