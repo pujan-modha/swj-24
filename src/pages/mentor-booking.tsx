@@ -101,7 +101,7 @@ export default function MentorBooking() {
                     {mentor.expertise}
                   </p>
                 </CardHeader>
-                <CardFooter>
+                <CardFooter className="hidden">
                   <Button
                     className="w-full rounded-full"
                     onClick={() => handleBooking(mentor)}
