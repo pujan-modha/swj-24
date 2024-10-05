@@ -85,7 +85,7 @@ export default function MentorBooking() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
-              <Card className="h-full flex flex-col border-2 border-brand bg-background">
+              <Card className="h-full flex flex-col border-2 border-brand bg-brand/10">
                 <CardHeader>
                   <img
                     src={mentor.photoUrl}
