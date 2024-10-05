@@ -54,13 +54,13 @@ const Mentor_details: Mentor[] = [
     photoUrl:
       "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728044155/q9ebdbacj5mbyfpcf2s9.jpg",
   },
-  {
-    id: 8,
-    name: "Atul gupta",
-    expertise: "Bonvie Snacks",
-    photoUrl:
-      "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728044308/boi2pckmk0gxqr5cglx7.jpg",
-  },
+  // {
+  //   id: 8,
+  //   name: "Atul gupta",
+  //   expertise: "Bonvie Snacks",
+  //   photoUrl:
+  //     "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728044308/boi2pckmk0gxqr5cglx7.jpg",
+  // },
   {
     id: 9,
     name: "Kapil Arya",
