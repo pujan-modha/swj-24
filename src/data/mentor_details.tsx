@@ -18,7 +18,7 @@ const Mentor_details: Mentor[] = [
     name: "Aastha Dusad",
     expertise: "Founder Of Med Delivery",
     photoUrl:
-      "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728043765/dp1mkrs68pamhfcrlqm7.jpg",
+      "https://res.cloudinary.com/ayushcloud18/image/upload/f_auto,q_auto/v1/swj24/pics/kvgn5qcxc5bt1aoiqrbv",
   },
   // {
   //     id: 3,
