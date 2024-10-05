@@ -29,14 +29,14 @@ const Mentor_details: Mentor[] = [
   {
     id: 4,
     name: "Aditi Gupta",
-    expertise: "Ceo/founder TechTip24",
+    expertise: "Founder & CEO - TechTip24",
     photoUrl:
       "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728043873/l4pu9kbblbopnupuqxjj.jpg",
   },
   {
     id: 5,
     name: "Arpan Garg",
-    expertise: "Founder of Commudle",
+    expertise: "Founder - Commudle",
     photoUrl:
       "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728043925/alrr8bzvx0ghh9uxq77v.jpg",
   },
@@ -50,21 +50,21 @@ const Mentor_details: Mentor[] = [
   {
     id: 7,
     name: "Vansh Soni",
-    expertise: "Founder & CEO of Botosynthesis",
+    expertise: "Founder & CEO - Botosynthesis",
     photoUrl:
       "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728044155/q9ebdbacj5mbyfpcf2s9.jpg",
   },
   {
     id: 8,
     name: "Atul gupta",
-    expertise: "bonvie snacks ",
+    expertise: "Bonvie Snacks",
     photoUrl:
       "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728044308/boi2pckmk0gxqr5cglx7.jpg",
   },
   {
     id: 9,
     name: "Kapil Arya",
-    expertise: "Tinkerly CEO",
+    expertise: "CEO - Tinkerly",
     photoUrl:
       "https://res.cloudinary.com/dhwzlp6qu/image/upload/v1728044369/re4v3l9hu6tbk2htvb2g.jpg",
   },
