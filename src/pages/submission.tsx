@@ -133,6 +133,8 @@ export default function IdeaSubmission() {
                   id="teamCode"
                   placeholder="Enter your Team Code"
                   required
+                  maxLength={6}
+                  minLength={6}
                   value={formData.teamCode}
                   onChange={handleInputChange}
                 />
