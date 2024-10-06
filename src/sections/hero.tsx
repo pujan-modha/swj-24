@@ -48,7 +48,7 @@ export default function Hero() {
               <span></span>
             </Button> */}
             <Button className="text-brand bg-brand/10 rounded-full border-2 backdrop-blur-sm hover:bg-brand hover:text-background border-brand duration-300">
-              <a href="/mentor-booking">Book a Mentor</a>
+              <a href="/idea-submission">Final Submission</a>
               <span>
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
               </span>
