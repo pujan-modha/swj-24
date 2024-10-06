@@ -34,7 +34,7 @@ export default function App() {
               <Route path="/campus-ambassador" element={<CampusAmbassador />} />
               <Route
                 path="/idea-submission"
-                element={<IdeaSubmission round={2} />}
+                element={<IdeaSubmission />}
               />
               <Route path="/voting" element={<VotingForIdeas />} />
               <Route path="/mentor-booking" element={<MentorBooking />} />

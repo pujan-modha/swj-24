@@ -43,7 +43,7 @@ export default function IdeaSubmission() {
 
     try {
       setIsSubmitting(true);
-      const res = await axios.post(
+      await axios.post(
         "https://swj-server.ayushcodings.me/api/v1/submission/new",
         formDataToSend,
         {
