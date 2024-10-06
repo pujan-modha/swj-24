@@ -99,8 +99,8 @@ export default function IdeaSubmission() {
                 Submission Window Closed
               </h2>
               <p className="text-center text-white">
-                The submission window for Startup Weekend Jaipur is closed.
-                Submission windows will open at 10:45 AM IST.
+                The submission window for Startup Weekend Jaipur is closed. All
+                the best for your presentations.
               </p>
             </div>
           </div>
